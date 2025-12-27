@@ -1,0 +1,132 @@
+---
+import MagazineSidebar from './MagazineSidebar.astro';
+---
+
+<section id="columna" class="section">
+  <div class="section-container">
+    <MagazineSidebar
+      title="Columna"
+      subtitle="Voces de la comunidad tech latinoamericana"
+      metadata="Ensayo invitado"
+    />
+
+    <div class="section-content">
+      <article class="essay">
+        <div class="essay-author">
+          <div class="author-avatar">
+            <span>DM</span>
+          </div>
+          <div class="author-info">
+            <p class="author-name">Diego Mendoza</p>
+            <p class="author-role">Senior Engineer @ Mercado Libre</p>
+          </div>
+        </div>
+
+        <h3 class="essay-title">
+          Por qué dejé de perseguir el "stack perfecto"
+        </h3>
+
+        <div class="essay-content">
+          <p>
+            Pasé tres años saltando de framework en framework. React, Vue, Svelte, Solid. Cada vez que aparecía algo nuevo, sentía que me estaba quedando atrás. Mi GitHub se llenó de proyectos abandonados a medio construir — todos con la tecnología más reciente, ninguno terminado.
+          </p>
+
+          <p>
+            El punto de inflexión llegó cuando un amigo me mostró su side project: una app de seguimiento de hábitos construida con PHP y jQuery. Sí, jQuery en 2024. Tenía 2,000 usuarios pagando $5 al mes. Mientras yo debatía entre Next.js y Remix, él estaba generando $10,000 mensuales con tecnología de hace 15 años.
+          </p>
+
+          <p>
+            La obsesión con el stack perfecto es una forma sofisticada de procrastinación. Nos convencemos de que estamos "aprendiendo" y "manteniéndonos actualizados", pero en realidad estamos evitando el trabajo difícil: terminar algo y ponerlo frente a usuarios reales.
+          </p>
+
+          <p>
+            Ahora tengo una regla simple: uso lo que ya sé hasta que me bloquea. Si React y Node me permiten construir lo que necesito, eso es lo que uso. Si un día necesito rendimiento extremo, aprenderé Rust. Pero solo cuando el problema lo demande — no cuando Twitter lo sugiera.
+          </p>
+
+          <p class="essay-quote">
+            La mejor tecnología es la que te permite enviar código. Todo lo demás es ruido.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .section-content {
+    flex: 1;
+  }
+
+  .essay-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .author-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-foreground);
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .author-name {
+    font-weight: 500;
+    color: var(--foreground);
+  }
+
+  .author-role {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+
+  .essay-title {
+    font-family: Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--foreground);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  .essay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--foreground);
+    line-height: 1.7;
+  }
+
+  .essay-quote {
+    font-style: italic;
+    color: var(--muted-foreground);
+  }
+
+  @media (min-width: 768px) {
+    .section-container {
+      flex-direction: row;
+      gap: 4rem;
+    }
+  }
+</style>

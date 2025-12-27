@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  metadata?: string;
+}
+
+const { title, subtitle, metadata } = Astro.props;
+---
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h2 class="sidebar-title">{title}</h2>
+    {subtitle && <p class="sidebar-subtitle">{subtitle}</p>}
+  </div>
+  {metadata && <p class="sidebar-metadata">{metadata}</p>}
+</aside>
+
+<style>
+  .sidebar {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .sidebar-header {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+  }
+
+  .sidebar-title {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  .sidebar-subtitle {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--muted-foreground);
+    line-height: 1.6;
+  }
+
+  .sidebar-metadata {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+  }
+
+  @media (min-width: 768px) {
+    .sidebar {
+      width: 16rem;
+    }
+  }
+</style>
