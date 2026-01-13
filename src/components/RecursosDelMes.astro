@@ -1,0 +1,99 @@
+---
+const recursos = [
+    {
+        id: 1,
+        imagen: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+        titulo: "Awesome LLM Apps",
+        tipo: "REPOSITORIO GITHUB",
+        fecha: "Enero 2025",
+        fuente: "github.com",
+        descripcion: "Colección curada de aplicaciones construidas con modelos de lenguaje...",
+    },
+    {
+        id: 2,
+        imagen: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop",
+        titulo: "Diseñando con IA",
+        tipo: "LIBRO",
+        fecha: "2024",
+        fuente: "O'Reilly Media",
+        descripcion: "Guía práctica para integrar inteligencia artificial en procesos de diseño.",
+    },
+    {
+        id: 3,
+        imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        titulo: "Estado de la IA 2025",
+        tipo: "ARTÍCULO",
+        fecha: "Dic 2024",
+        fuente: "Stanford HAI",
+        descripcion: "Reporte anual sobre el estado actual y tendencias de la inteligencia artificial.",
+    },
+    {
+        id: 4,
+        imagen: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+        titulo: "v0 by Vercel",
+        tipo: "HERRAMIENTA",
+        fecha: "2025",
+        fuente: "vercel.com",
+        descripcion: "Generador de interfaces con IA que transforma descripciones en código.",
+    },
+];
+---
+
+<section class="py-16 border-t border-border">
+    <div class="container">
+        <!-- Section header -->
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">
+                    RECURSOS
+                </p>
+                <h2 class="font-serif text-2xl md:text-3xl font-normal">
+                    Recursos del mes
+                </h2>
+            </div>
+            <a
+                href="/recursos"
+                class="hidden md:inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+                Ver todos →
+            </a>
+        </div>
+
+        <!-- Resources grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {
+                recursos.map((recurso) => (
+                    <a href={`/recursos/${recurso.id}`} class="group block">
+                        <div class="aspect-[4/3] overflow-hidden rounded-sm mb-4">
+                            <img
+                                src={recurso.imagen}
+                                alt={recurso.titulo}
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                        </div>
+                        <h3 class="font-serif text-lg font-normal mb-1 group-hover:underline">
+                            {recurso.titulo}
+                        </h3>
+                        <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
+                            {recurso.tipo}
+                        </p>
+                        <p class="text-xs text-muted-foreground mb-2">
+                            {recurso.fecha} · {recurso.fuente}
+                        </p>
+                        <p class="text-sm text-muted-foreground leading-relaxed">
+                            {recurso.descripcion}
+                        </p>
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- Mobile link -->
+        <a
+            href="/recursos"
+            class="md:hidden inline-flex text-sm text-muted-foreground hover:text-foreground transition-colors mt-6"
+        >
+            Ver todos →
+        </a>
+    </div>
+</section>

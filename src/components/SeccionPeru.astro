@@ -1,0 +1,66 @@
+---
+const articulos = [
+    {
+        id: 1,
+        titulo: "Ensayo: El futuro del trabajo remoto en LATAM",
+        categoria: "COLUMNA INVITADA",
+        fecha: "Ene 15, 2025",
+    },
+    {
+        id: 2,
+        titulo: "LATAM: Eventos y movimientos de enero",
+        categoria: "EVENTOS",
+        fecha: "Ene 12, 2025",
+    },
+    {
+        id: 3,
+        titulo: "Caso de estudio: Rappi y la última milla",
+        categoria: "CASO DE ESTUDIO",
+        fecha: "Ene 10, 2025",
+    },
+    {
+        id: 4,
+        titulo: "Recursos del mes: Lo mejor de enero",
+        categoria: "RECURSOS",
+        fecha: "Ene 8, 2025",
+    },
+];
+---
+
+<section class="py-16 border-t border-border">
+    <div class="container">
+        <!-- Section header -->
+        <div class="mb-8">
+            <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">
+                PERÚ
+            </p>
+            <h2 class="font-serif text-2xl md:text-3xl font-normal">
+                Lo que se está construyendo en Perú
+            </h2>
+        </div>
+
+        <!-- Articles list -->
+        <div class="divide-y divide-border">
+            {
+                articulos.map((articulo) => (
+                    <a
+                        href={`/articulos/${articulo.id}`}
+                        class="group flex flex-col md:flex-row md:items-center justify-between py-4 gap-2 md:gap-8 hover:bg-secondary/30 -mx-4 px-4 transition-colors"
+                    >
+                        <h3 class="font-medium text-foreground group-hover:underline">
+                            {articulo.titulo}
+                        </h3>
+                        <div class="flex items-center gap-4 md:gap-8 text-sm text-muted-foreground shrink-0">
+                            <span class="text-xs font-medium uppercase tracking-widest">
+                                {articulo.categoria}
+                            </span>
+                            <span>
+                                {articulo.fecha}
+                            </span>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,50 +1,86 @@
 ---
-const navLinks = [
-    { label: "Ediciones", href: "/ediciones" },
-    { label: "Sobre Nosotros", href: "/sobre-nosotros" },
-    { label: "Contacto", href: "/contacto" },
+const sectionLinks = [
+    { label: "Entrevistas", href: "/entrevistas" },
+    { label: "Proyectos", href: "/proyectos" },
+    { label: "Eventos LATAM", href: "/eventos" },
+    { label: "Estudios", href: "/estudios" },
+    { label: "Columnas", href: "/columnas" },
+    { label: "Recursos", href: "/recursos" },
 ];
 
-const socialLinks = [
+const crafterLinks = [
+    { label: "Website", href: "https://crafterstation.com" },
     { label: "Twitter", href: "https://twitter.com/crafterstation" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/crafterstation" },
     { label: "GitHub", href: "https://github.com/crafterstation" },
 ];
 ---
 
-<footer class="py-12 border-t border-border">
+<!-- Newsletter Section -->
+<section class="py-16 bg-foreground text-background">
     <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <!-- Brand -->
-            <div class="md:col-span-2">
-                <div class="flex items-center gap-2 mb-4">
-                    <span class="font-serif text-xl font-bold">Press</span>
-                    <a
-                        href="https://crafterstation.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-[10px] font-medium uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        by CRAFTERSTATION
-                    </a>
-                </div>
-                <p
-                    class="text-sm text-muted-foreground max-w-sm leading-relaxed"
-                >
-                    Una revista digital sobre tecnología, diseño e innovación en
-                    Latinoamérica. Hecha con cariño desde la comunidad, para la
-                    comunidad.
+        <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8"
+        >
+            <div class="max-w-xl">
+                <h2 class="font-serif text-3xl md:text-4xl font-normal mb-4">
+                    Recibe Press cada mes
+                </h2>
+                <p class="text-background/70 leading-relaxed">
+                    Entrevistas, proyectos, eventos y recursos del ecosistema
+                    tech latinoamericano. Sin spam, solo contenido que vale la
+                    pena.
                 </p>
             </div>
 
-            <!-- Navigation -->
-            <div>
+            <form class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                <input
+                    type="email"
+                    placeholder="tu@email.com"
+                    class="px-4 py-3 bg-background/10 border border-background/20 rounded-sm text-background placeholder:text-background/50 focus:outline-none focus:border-background/40 w-full sm:w-72"
+                    required
+                />
+                <button
+                    type="submit"
+                    class="px-6 py-3 bg-accent text-accent-foreground font-medium text-sm uppercase tracking-widest rounded-sm hover:bg-accent/90 transition-colors whitespace-nowrap"
+                >
+                    SUSCRIBIRME
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-border">
+    <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+            <!-- Brand -->
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="font-serif text-xl font-bold">Press</span>
+                    <span
+                        class="text-[10px] font-medium uppercase tracking-widest text-muted-foreground"
+                    >
+                        BY CRAFTERSTATION
+                    </span>
+                </div>
+                <p
+                    class="text-sm text-muted-foreground leading-relaxed max-w-sm"
+                >
+                    Una revista mensual de tecnología para Latinoamérica.
+                    <br />
+                    Hecha con cariño desde la comunidad, para la comunidad.
+                </p>
+            </div>
+
+            <!-- Sections -->
+            <div class="md:col-span-4">
                 <h4 class="text-xs font-medium uppercase tracking-widest mb-4">
-                    Navegación
+                    SECCIONES
                 </h4>
-                <nav class="flex flex-col gap-2">
+                <nav class="grid grid-cols-2 gap-x-4 gap-y-2">
                     {
-                        navLinks.map((link) => (
+                        sectionLinks.map((link) => (
                             <a
                                 href={link.href}
                                 class="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -56,14 +92,14 @@ const socialLinks = [
                 </nav>
             </div>
 
-            <!-- Social -->
-            <div>
+            <!-- CrafterStation -->
+            <div class="md:col-span-3">
                 <h4 class="text-xs font-medium uppercase tracking-widest mb-4">
-                    Síguenos
+                    CRAFTERSTATION
                 </h4>
                 <nav class="flex flex-col gap-2">
                     {
-                        socialLinks.map((link) => (
+                        crafterLinks.map((link) => (
                             <a
                                 href={link.href}
                                 target="_blank"
