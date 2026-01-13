@@ -1,159 +1,180 @@
 ---
 const sectionLinks = [
-  { label: "Entrevistas", href: "#entrevista" },
-  { label: "Proyectos", href: "#proyecto" },
-  { label: "Eventos LATAM", href: "#latam" },
-  { label: "Estudios", href: "#estudio" },
-  { label: "Columnas", href: "#columna" },
-  { label: "Recursos", href: "#recursos" },
+    { label: "Eventos", href: "#eventos" },
+    { label: "Proyecto", href: "#proyecto" },
+    { label: "Artículos", href: "#articulos" },
+    { label: "Persona", href: "#persona" },
+    { label: "Recursos", href: "#recursos" },
 ];
 
 const crafterLinks = [
-  { label: "Website", href: "https://crafterstation.com" },
-  { label: "Twitter", href: "https://twitter.com/crafterstation" },
-  { label: "GitHub", href: "https://github.com/crafterstation" },
+    { label: "Website", href: "https://crafterstation.com" },
+    { label: "Twitter", href: "https://twitter.com/crafterstation" },
+    { label: "GitHub", href: "https://github.com/crafterstation" },
 ];
 ---
 
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <div class="logo">
-          <a href="/" class="logo-text">Press</a>
-          <a href="https://crafterstation.com" target="_blank" rel="noopener noreferrer" class="logo-subtitle">by CrafterStation</a>
-        </div>
-        <p class="footer-description">
-          Una revista mensual de tecnología para Latinoamérica. Hecha con cariño desde la comunidad, para la comunidad.
-        </p>
-      </div>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="/" class="logo-text">Press</a>
+                    <a
+                        href="https://crafterstation.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="logo-subtitle">by CrafterStation</a
+                    >
+                </div>
+                <p class="footer-description">
+                    Una revista mensual de tecnología para Latinoamérica. Hecha
+                    con cariño desde la comunidad, para la comunidad.
+                </p>
+            </div>
 
-      <div class="footer-links">
-        <div class="footer-column">
-          <h4 class="footer-heading">Secciones</h4>
-          <nav class="footer-nav">
-            {sectionLinks.map((link) => (
-              <a href={link.href} class="footer-link">{link.label}</a>
-            ))}
-          </nav>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-heading">Secciones</h4>
+                    <nav class="footer-nav">
+                        {
+                            sectionLinks.map((link) => (
+                                <a href={link.href} class="footer-link">
+                                    {link.label}
+                                </a>
+                            ))
+                        }
+                    </nav>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">CrafterStation</h4>
+                    <nav class="footer-nav">
+                        {
+                            crafterLinks.map((link) => (
+                                <a
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="footer-link"
+                                >
+                                    {link.label}
+                                </a>
+                            ))
+                        }
+                    </nav>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-column">
-          <h4 class="footer-heading">CrafterStation</h4>
-          <nav class="footer-nav">
-            {crafterLinks.map((link) => (
-              <a href={link.href} target="_blank" rel="noopener noreferrer" class="footer-link">{link.label}</a>
-            ))}
-          </nav>
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2025 CrafterStation. Press es un proyecto open source.
+            </p>
         </div>
-      </div>
     </div>
-
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2025 CrafterStation. Press es un proyecto open source.</p>
-    </div>
-  </div>
 </footer>
 
 <style>
-  .footer {
-    padding: 3rem 0;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .footer-brand {
-    max-width: 20rem;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .logo-text {
-    font-family: Georgia, serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--primary);
-  }
-
-  .logo-subtitle {
-    font-size: 0.75rem;
-    color: var(--muted-foreground);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: color 0.2s;
-  }
-
-  .logo-subtitle:hover {
-    color: var(--foreground);
-  }
-
-  .footer-description {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 3rem;
-  }
-
-  .footer-heading {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--foreground);
-    margin-bottom: 0.75rem;
-  }
-
-  .footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer-link {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    transition: color 0.2s;
-  }
-
-  .footer-link:hover {
-    color: var(--foreground);
-  }
-
-  .footer-bottom {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-copyright {
-    font-size: 0.75rem;
-    color: var(--muted-foreground);
-    text-align: center;
-  }
-
-  @media (min-width: 768px) {
-    .footer-content {
-      flex-direction: row;
-      justify-content: space-between;
+    .footer {
+        padding: 3rem 0;
+        border-top: 1px solid var(--border);
     }
-  }
+
+    .footer-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        max-width: 20rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-text {
+        font-family: Georgia, serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: var(--foreground);
+    }
+
+    .logo-subtitle {
+        font-size: 0.75rem;
+        color: var(--muted-foreground);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: color 0.2s;
+    }
+
+    .logo-subtitle:hover {
+        color: var(--foreground);
+    }
+
+    .footer-description {
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+        line-height: 1.6;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .footer-heading {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--foreground);
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-link {
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+        transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+        color: var(--foreground);
+    }
+
+    .footer-bottom {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+        color: var(--muted-foreground);
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 </style>

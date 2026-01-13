@@ -1,33 +1,33 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import SectionInterview from '../components/SectionInterview.astro';
-import SectionProject from '../components/SectionProject.astro';
-import SectionLatam from '../components/SectionLatam.astro';
-import SectionStudy from '../components/SectionStudy.astro';
-import SectionEssay from '../components/SectionEssay.astro';
-import SectionResources from '../components/SectionResources.astro';
-import NewsletterSignup from '../components/NewsletterSignup.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import HeroLanding from "../components/HeroLanding.astro";
+import SectionLatam from "../components/SectionLatam.astro";
+import SectionProject from "../components/SectionProject.astro";
+import SectionStudy from "../components/SectionStudy.astro";
+import SectionEssay from "../components/SectionEssay.astro";
+import SectionInterview from "../components/SectionInterview.astro";
+import SectionResources from "../components/SectionResources.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<SectionInterview />
-			<SectionProject />
-			<SectionLatam />
-			<SectionStudy />
-			<SectionEssay />
-			<SectionResources />
-			<NewsletterSignup />
-		</main>
-		<Footer />
-	</body>
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <HeroLanding />
+            <SectionLatam />
+            <SectionProject />
+            <SectionStudy />
+            <SectionEssay />
+            <SectionInterview />
+            <SectionResources />
+        </main>
+        <Footer />
+    </body>
 </html>

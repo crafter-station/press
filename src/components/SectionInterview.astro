@@ -1,150 +1,168 @@
 ---
-import MagazineSidebar from './MagazineSidebar.astro';
+
 ---
 
-<section id="entrevista" class="section">
-  <div class="section-container">
-    <MagazineSidebar
-      title="Entrevista del Mes"
-      subtitle="Conversaciones con quienes construyen el futuro tech de LATAM"
-      metadata="Edición: Enero 2025"
-    />
+<section id="persona" class="section">
+    <div class="section-container">
+        <span class="section-label">Persona del mes</span>
 
-    <div class="section-content">
-      <div class="interview-layout">
-        <div class="interview-image">
-          <div class="image-placeholder">
-            <span>Foto</span>
-          </div>
+        <div class="persona-layout">
+            <div class="persona-image">
+                <div class="image-placeholder">
+                    <span>Foto</span>
+                </div>
+            </div>
+
+            <div class="persona-content">
+                <h2 class="persona-name">María González</h2>
+                <p class="persona-role">
+                    Fundadora de TechLatam, liderando la revolución de startups
+                    en América Latina
+                </p>
+
+                <div class="persona-bio">
+                    <p>
+                        Con más de 15 años de experiencia en el ecosistema
+                        tecnológico, María ha sido fundamental en el crecimiento
+                        de más de 200 startups en la región. Su enfoque en la
+                        inclusión y el desarrollo sostenible la ha convertido en
+                        una de las voces más influyentes del sector.
+                    </p>
+                    <blockquote class="persona-quote">
+                        "Lo que me motiva cada día es ver cómo la tecnología
+                        puede ser una herramienta de cambio real en nuestras
+                        comunidades. No se trata solo de crear empresas
+                        exitosas, sino de crear impacto positivo."
+                    </blockquote>
+                    <p>
+                        María comenzó su carrera en una pequeña startup en
+                        Buenos Aires, donde aprendió que la innovación no conoce
+                        fronteras. Hoy, lidera una red que conecta a
+                        emprendedores de toda la región, facilitando mentoría,
+                        inversión y oportunidades de colaboración.
+                    </p>
+                    <p>
+                        Su visión para los próximos cinco años es ambiciosa:
+                        quiere que LATAM se convierta en uno de los principales
+                        hubs tecnológicos del mundo, no solo por el talento que
+                        produce, sino por las soluciones únicas que emergen de
+                        entender los desafíos locales.
+                    </p>
+                </div>
+
+                <div class="persona-tags">
+                    <span class="tag">Innovación</span>
+                    <span class="tag">Liderazgo</span>
+                    <span class="tag">Impacto Social</span>
+                </div>
+            </div>
         </div>
-
-        <div class="interview-text">
-          <h3 class="interview-title">
-            Valentina Rojas: "El talento en LATAM no necesita permiso para innovar"
-          </h3>
-          <p class="interview-role">Fundadora de NexoAI — Santiago, Chile</p>
-
-          <div class="interview-content">
-            <p><strong class="question">Press:</strong> ¿Cómo empezaste en el mundo tech?</p>
-            <p><strong class="question">Valentina:</strong> Estudié ingeniería civil, pero mi pasión siempre fue la programación. Aprendí de manera autodidacta mientras trabajaba en proyectos de infraestructura. Un día, automaticé un proceso que le ahorraba a mi equipo 40 horas semanales. Ahí supe que quería dedicarme a esto completamente.</p>
-
-            <p><strong class="question">Press:</strong> NexoAI ha crecido rápidamente. ¿Qué los diferencia?</p>
-            <p><strong class="question">Valentina:</strong> Entendemos el contexto latinoamericano. No estamos copiando soluciones del norte — las estamos creando desde cero pensando en nuestros mercados, nuestros idiomas, nuestras particularidades. Nuestro modelo de lenguaje entiende el español chileno, el mexicano, el argentino. Eso parece pequeño, pero hace toda la diferencia.</p>
-
-            <p><strong class="question">Press:</strong> ¿Qué consejo le darías a quienes están empezando?</p>
-            <p><strong class="question">Valentina:</strong> Que dejen de esperar validación externa. El talento en LATAM no necesita permiso para innovar. Construyan, fallen rápido, aprendan, y vuelvan a construir. La comunidad tech latinoamericana es increíblemente solidaria — úsala.</p>
-          </div>
-
-          <div class="interview-footer">
-            <p class="interview-note">Valentina será keynote speaker en DevCon LATAM 2025 este marzo en Ciudad de México.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <style>
-  .section {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-  }
+    .section {
+        padding: 5rem 0;
+        border-bottom: 1px solid var(--border);
+    }
 
-  .section-container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .section-content {
-    flex: 1;
-  }
-
-  .interview-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .interview-image {
-    width: 100%;
-    flex-shrink: 0;
-  }
-
-  .image-placeholder {
-    aspect-ratio: 1;
-    background: var(--muted);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted-foreground);
-    font-size: 0.875rem;
-  }
-
-  .interview-text {
-    flex: 1;
-  }
-
-  .interview-title {
-    font-family: Georgia, serif;
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--foreground);
-    line-height: 1.3;
-  }
-
-  .interview-role {
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
-    color: var(--accent);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .interview-content {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: var(--foreground);
-    line-height: 1.6;
-  }
-
-  .question {
-    color: var(--primary);
-  }
-
-  .interview-footer {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .interview-note {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    font-style: italic;
-  }
-
-  @media (min-width: 768px) {
     .section-container {
-      flex-direction: row;
-      gap: 4rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .interview-layout {
-      flex-direction: row;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
     }
 
-    .interview-image {
-      width: 12rem;
+    .section-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
     }
-  }
+
+    .persona-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .persona-image {
+        /* image container */
+    }
+
+    .image-placeholder {
+        aspect-ratio: 4/5;
+        background: var(--muted);
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted-foreground);
+        font-size: 0.875rem;
+    }
+
+    .persona-name {
+        font-family: Georgia, serif;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 1.1;
+        color: var(--foreground);
+        margin-bottom: 1rem;
+    }
+
+    .persona-role {
+        font-size: 1.25rem;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+    }
+
+    .persona-bio {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .persona-bio p {
+        font-size: 1.125rem;
+        line-height: 1.7;
+        color: var(--muted-foreground);
+    }
+
+    .persona-quote {
+        font-family: Georgia, serif;
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: var(--foreground);
+        padding-left: 1.5rem;
+        border-left: 4px solid var(--accent);
+    }
+
+    .persona-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2rem;
+    }
+
+    .tag {
+        padding: 0.5rem 1rem;
+        background: var(--muted);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        color: var(--foreground);
+    }
+
+    @media (min-width: 1024px) {
+        .persona-layout {
+            grid-template-columns: 5fr 7fr;
+        }
+
+        .persona-name {
+            font-size: 4rem;
+        }
+    }
 </style>

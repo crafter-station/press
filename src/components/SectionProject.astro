@@ -1,210 +1,219 @@
 ---
-import MagazineSidebar from './MagazineSidebar.astro';
 
-const features = [
-  "Integración nativa con Next.js, Remix y Astro",
-  "Soporte para 47 idiomas con detección automática de contexto",
-  "Pipeline de CI/CD listo para usar con GitHub Actions",
-  "Modo offline con caché inteligente de traducciones",
-];
 ---
 
 <section id="proyecto" class="section">
-  <div class="section-container">
-    <MagazineSidebar
-      title="Proyecto Foco"
-      subtitle="Proyectos maduros construidos por la comunidad LATAM"
-      metadata="Selección mensual"
-    />
+    <div class="section-container">
+        <span class="section-label">Proyecto Foco</span>
 
-    <div class="section-content">
-      <div class="project-header">
-        <div>
-          <h3 class="project-title">Localizer</h3>
-          <p class="project-author">por Matías Hernández — Buenos Aires, Argentina</p>
+        <div class="project-header">
+            <h2 class="project-title">
+                EcoTrack: Monitoreando la <span class="highlight"
+                    >huella ambiental</span
+                > en tiempo real
+            </h2>
+            <p class="project-description">
+                Una plataforma open source que permite a empresas y comunidades
+                medir y reducir su impacto ambiental de manera accesible.
+            </p>
         </div>
-        <div class="project-stars">
-          <svg class="icon-star" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-          <span>2.4k</span>
+
+        <div class="project-gallery">
+            <div class="gallery-item">
+                <div class="image-placeholder">
+                    <span>Dashboard</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">
+                    <span>App móvil</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-placeholder">
+                    <span>Visualización</span>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <p class="project-description">
-        Una herramienta CLI y biblioteca para gestionar traducciones en proyectos JavaScript/TypeScript. Localizer resuelve el problema de mantener archivos de traducción sincronizados, detectar strings sin traducir, y generar traducciones automáticas usando LLMs.
-      </p>
+        <div class="project-content">
+            <div class="content-block">
+                <h3 class="content-title">El problema</h3>
+                <p class="content-text">
+                    Las pequeñas y medianas empresas en LATAM carecen de
+                    herramientas accesibles para medir su impacto ambiental. Las
+                    soluciones existentes son costosas y complejas, dejando
+                    fuera a quienes más necesitan estos recursos.
+                </p>
+            </div>
+            <div class="content-block">
+                <h3 class="content-title">La solución</h3>
+                <p class="content-text">
+                    EcoTrack ofrece una plataforma gratuita y open source que
+                    integra datos de consumo energético, agua y residuos. Con
+                    una interfaz intuitiva y reportes automatizados, democratiza
+                    el acceso a la sostenibilidad.
+                </p>
+            </div>
+        </div>
 
-      <div class="project-features">
-        <h4 class="features-title">Por qué destaca</h4>
-        <ul class="features-list">
-          {features.map((item, i) => (
-            <li class="feature-item">
-              <span class="feature-number">{i + 1}</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div class="project-install">
-        <code>npm install -g @localizer/cli</code>
-      </div>
-
-      <div class="project-links">
-        <a href="#" class="project-link">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          Ver repositorio
-        </a>
-        <a href="#" class="project-link">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-          Documentación
-        </a>
-      </div>
+        <div class="project-stats">
+            <div class="stat">
+                <p class="stat-number">2,500+</p>
+                <p class="stat-label">Empresas activas</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number">15 países</p>
+                <p class="stat-label">En LATAM</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number">40%</p>
+                <p class="stat-label">Reducción promedio</p>
+            </div>
+            <div class="stat">
+                <p class="stat-number">Open Source</p>
+                <p class="stat-label">100% gratuito</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <style>
-  .section {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--card);
-  }
-
-  .section-container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .section-content {
-    flex: 1;
-  }
-
-  .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .project-title {
-    font-family: Georgia, serif;
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--foreground);
-  }
-
-  .project-author {
-    margin-top: 0.25rem;
-    font-size: 0.875rem;
-    color: var(--accent);
-    font-weight: 500;
-  }
-
-  .project-stars {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--muted-foreground);
-  }
-
-  .icon-star {
-    width: 1rem;
-    height: 1rem;
-    fill: var(--accent);
-    color: var(--accent);
-  }
-
-  .project-description {
-    margin-top: 1.5rem;
-    font-size: 1.125rem;
-    color: var(--foreground);
-    line-height: 1.6;
-  }
-
-  .project-features {
-    margin-top: 2rem;
-  }
-
-  .features-title {
-    font-weight: 500;
-    color: var(--foreground);
-    margin-bottom: 0.75rem;
-  }
-
-  .features-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    color: var(--muted-foreground);
-  }
-
-  .feature-number {
-    color: var(--accent);
-    font-weight: 700;
-  }
-
-  .project-install {
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    background: var(--secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .project-install code {
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 0.875rem;
-    color: var(--foreground);
-  }
-
-  .project-links {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    color: var(--accent);
-    transition: color 0.2s;
-  }
-
-  .project-link:hover {
-    color: var(--foreground);
-  }
-
-  .icon {
-    width: 1rem;
-    height: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    .section-container {
-      flex-direction: row;
-      gap: 4rem;
+    .section {
+        padding: 5rem 0;
+        border-bottom: 1px solid var(--border);
     }
-  }
+
+    .section-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .section-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+    }
+
+    .project-title {
+        font-family: Georgia, serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--foreground);
+        margin-bottom: 1rem;
+    }
+
+    .highlight {
+        background-color: var(--accent);
+        padding: 0 0.25rem;
+    }
+
+    .project-description {
+        font-size: 1.25rem;
+        color: var(--muted-foreground);
+        max-width: 48rem;
+    }
+
+    .project-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-item {
+        aspect-ratio: 16/9;
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 100%;
+        background: var(--muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted-foreground);
+        font-size: 0.875rem;
+    }
+
+    .project-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .content-block {
+        /* block style */
+    }
+
+    .content-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--foreground);
+        margin-bottom: 1rem;
+    }
+
+    .content-text {
+        color: var(--muted-foreground);
+        line-height: 1.7;
+    }
+
+    .project-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+        background: var(--card);
+        border-radius: var(--radius);
+        text-align: center;
+    }
+
+    .stat-number {
+        font-family: Georgia, serif;
+        font-size: 1.875rem;
+        font-weight: 400;
+        color: var(--foreground);
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-foreground);
+    }
+
+    @media (min-width: 640px) {
+        .project-gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .project-content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .project-stats {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .project-title {
+            font-size: 3rem;
+        }
+    }
 </style>

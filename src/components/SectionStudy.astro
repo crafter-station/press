@@ -1,211 +1,247 @@
 ---
-import MagazineSidebar from './MagazineSidebar.astro';
 
-const findings = [
-  {
-    num: 1,
-    text: 'Los modelos muestran "fragilidad de razonamiento": cambian pequeñas variaciones en el prompt, cambian las respuestas — incluso cuando la lógica subyacente es idéntica.',
-  },
-  {
-    num: 2,
-    text: 'El rendimiento en tareas matemáticas cae 34% cuando se usan números fuera de distribución (ej: usar 7,429 en vez de números "redondos" como 100).',
-  },
-  {
-    num: 3,
-    text: 'La técnica de "chain-of-thought" mejora resultados, pero no porque el modelo razone — sino porque reduce el espacio de búsqueda de patrones.',
-  },
-];
 ---
 
-<section id="estudio" class="section">
-  <div class="section-container">
-    <MagazineSidebar
-      title="Mini Estudio"
-      subtitle="Investigaciones recientes explicadas de forma simple"
-      metadata="Resumen mensual"
-    />
+<section id="articulos" class="section">
+    <div class="section-container">
+        <span class="section-label">Mini Estudio Explicado</span>
 
-    <div class="section-content">
-      <div class="study-source">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="16" y1="13" x2="8" y2="13"/>
-          <line x1="16" y1="17" x2="8" y2="17"/>
-          <polyline points="10 9 9 9 8 9"/>
-        </svg>
-        <span>Fuente: Stanford HAI — Diciembre 2024</span>
-      </div>
+        <div class="study-layout">
+            <div class="study-content">
+                <h2 class="study-title">
+                    ¿Por qué las apps de productividad nos hacen menos
+                    productivos?
+                </h2>
+                <p class="study-intro">
+                    Un estudio de Stanford revela la paradoja de las
+                    herramientas digitales. Te lo explicamos de manera sencilla.
+                </p>
 
-      <h3 class="study-title">
-        ¿Los LLMs realmente "razonan"? Un análisis de las capacidades emergentes
-      </h3>
+                <div class="study-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">El hallazgo principal</h3>
+                            <p class="step-text">
+                                Los usuarios que utilizan más de 4 apps de
+                                productividad reportan un 23% menos de tareas
+                                completadas que aquellos que usan solo 1-2
+                                herramientas.
+                            </p>
+                        </div>
+                    </div>
 
-      <div class="study-content">
-        <p>
-          <strong class="highlight">El estudio:</strong> Investigadores de Stanford evaluaron 12 modelos de lenguaje grandes (GPT-4, Claude, Gemini, Llama y otros) en 847 tareas de razonamiento lógico, matemático y causal para determinar si estos sistemas realmente "razonan" o simplemente reconocen patrones sofisticados.
-        </p>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">¿Por qué sucede esto?</h3>
+                            <p class="step-text">
+                                El "costo de cambio" entre aplicaciones consume
+                                un promedio de 47 minutos diarios. Además, el
+                                tiempo dedicado a organizar tareas en múltiples
+                                sistemas supera al tiempo real de ejecución.
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="findings">
-          <h4 class="findings-title">Hallazgos clave</h4>
-          <ul class="findings-list">
-            {findings.map((item) => (
-              <li class="finding-item">
-                <span class="finding-number">{item.num}</span>
-                <span class="finding-text">{item.text}</span>
-              </li>
-            ))}
-          </ul>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">La recomendación</h3>
+                            <p class="step-text">
+                                Consolidar herramientas y priorizar la
+                                simplicidad sobre las funcionalidades. Una sola
+                                app bien utilizada supera a múltiples
+                                herramientas fragmentadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-sidebar">
+                <div class="sidebar-card">
+                    <h4 class="sidebar-title">Datos clave</h4>
+                    <div class="sidebar-stats">
+                        <div class="sidebar-stat">
+                            <p class="sidebar-stat-number">47 min</p>
+                            <p class="sidebar-stat-label">
+                                Perdidos en cambio de contexto
+                            </p>
+                        </div>
+                        <div class="sidebar-stat">
+                            <p class="sidebar-stat-number">23%</p>
+                            <p class="sidebar-stat-label">
+                                Menos productividad
+                            </p>
+                        </div>
+                        <div class="sidebar-stat">
+                            <p class="sidebar-stat-number">1,200</p>
+                            <p class="sidebar-stat-label">
+                                Participantes del estudio
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sidebar-source">
+                        <p>Fuente: Stanford Digital Productivity Lab, 2024</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="study-takeaway">
-          <h4 class="takeaway-title">¿Qué significa para ti?</h4>
-          <p class="takeaway-text">
-            Si estás usando LLMs para tareas que requieren razonamiento real (análisis financiero, diagnósticos, decisiones críticas), no confíes ciegamente en sus respuestas. Son excelentes para generar borradores y explorar ideas, pero la verificación humana sigue siendo esencial.
-          </p>
-        </div>
-      </div>
-
-      <div class="study-footer">
-        <a href="#" class="study-link">
-          <span>Leer estudio completo</span>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-        </a>
-      </div>
     </div>
-  </div>
 </section>
 
 <style>
-  .section {
-    padding: 4rem 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--card);
-  }
-
-  .section-container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .section-content {
-    flex: 1;
-  }
-
-  .study-source {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--muted-foreground);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
-
-  .icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
-  .study-title {
-    font-family: Georgia, serif;
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--foreground);
-    line-height: 1.3;
-  }
-
-  .study-content {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    color: var(--foreground);
-    line-height: 1.6;
-  }
-
-  .highlight {
-    color: var(--primary);
-  }
-
-  .findings {
-    margin-top: 0.5rem;
-  }
-
-  .findings-title {
-    font-weight: 500;
-    color: var(--foreground);
-    margin-bottom: 0.75rem;
-  }
-
-  .findings-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .finding-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .finding-number {
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .finding-text {
-    color: var(--muted-foreground);
-  }
-
-  .study-takeaway {
-    background: var(--secondary);
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-  }
-
-  .takeaway-title {
-    font-weight: 500;
-    color: var(--foreground);
-    margin-bottom: 0.5rem;
-  }
-
-  .takeaway-text {
-    color: var(--muted-foreground);
-  }
-
-  .study-footer {
-    margin-top: 2rem;
-  }
-
-  .study-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    color: var(--accent);
-    transition: color 0.2s;
-  }
-
-  .study-link:hover {
-    color: var(--foreground);
-  }
-
-  @media (min-width: 768px) {
-    .section-container {
-      flex-direction: row;
-      gap: 4rem;
+    .section {
+        padding: 5rem 0;
+        border-bottom: 1px solid var(--border);
     }
-  }
+
+    .section-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .section-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+    }
+
+    .study-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .study-title {
+        font-family: Georgia, serif;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--foreground);
+        margin-bottom: 1rem;
+    }
+
+    .study-intro {
+        font-size: 1.125rem;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+    }
+
+    .study-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .step {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .step-number {
+        flex-shrink: 0;
+        width: 3rem;
+        height: 3rem;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Georgia, serif;
+        font-size: 1.25rem;
+        color: var(--accent-foreground);
+    }
+
+    .step-content {
+        flex: 1;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--foreground);
+        margin-bottom: 0.5rem;
+    }
+
+    .step-text {
+        color: var(--muted-foreground);
+        line-height: 1.7;
+    }
+
+    .study-sidebar {
+        /* sidebar container */
+    }
+
+    .sidebar-card {
+        padding: 1.5rem;
+        background: var(--card);
+        border-radius: var(--radius);
+        position: sticky;
+        top: 6rem;
+    }
+
+    .sidebar-title {
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sidebar-stat {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-stat:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .sidebar-stat-number {
+        font-family: Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--foreground);
+    }
+
+    .sidebar-stat-label {
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+    }
+
+    .sidebar-source {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+    }
+
+    .sidebar-source p {
+        font-size: 0.75rem;
+        color: var(--muted-foreground);
+    }
+
+    @media (min-width: 1024px) {
+        .study-layout {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .study-title {
+            font-size: 2.5rem;
+        }
+    }
 </style>
