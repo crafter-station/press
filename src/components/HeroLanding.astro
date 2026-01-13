@@ -2,116 +2,33 @@
 
 ---
 
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-content">
-      <span class="hero-edition">Edición Enero 2025</span>
-      <h1 class="hero-title">
-        Una nueva forma de <span class="highlight">contar historias</span>
-      </h1>
-      <p class="hero-description">
-        Exploramos las intersecciones entre tecnología, diseño y el impacto que tienen en nuestra región.
-        Historias que importan, proyectos que inspiran, y recursos que transforman.
-      </p>
+<section class="py-16 md:py-24 lg:py-32">
+    <div class="container">
+        <div class="max-w-4xl">
+            <!-- Edition label -->
+            <p
+                class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-6"
+            >
+                EDICIÓN 01 — ENERO 2025
+            </p>
+
+            <!-- Main title -->
+            <h1
+                class="font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-8"
+            >
+                Una nueva forma de <span class="highlight">contar</span>
+                <br />
+                <span class="highlight">historias</span>
+            </h1>
+
+            <!-- Description -->
+            <p
+                class="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+            >
+                Exploramos las intersecciones entre tecnología, diseño y el
+                impacto que tienen en nuestra región. Bienvenidos a la primera
+                edición de nuestra revista digital.
+            </p>
+        </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Artículos</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">6</span>
-        <span class="stat-label">Eventos</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">4</span>
-        <span class="stat-label">Recursos</span>
-      </div>
-    </div>
-  </div>
 </section>
-
-<style>
-  .hero {
-    padding: 5rem 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .hero-container {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .hero-content {
-    max-width: 48rem;
-  }
-
-  .hero-edition {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted-foreground);
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-title {
-    font-family: Georgia, serif;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 1.1;
-    color: var(--foreground);
-    margin-bottom: 1.5rem;
-  }
-
-  .highlight {
-    background-color: var(--accent);
-    padding: 0 0.25rem;
-  }
-
-  .hero-description {
-    font-size: 1.25rem;
-    color: var(--muted-foreground);
-    line-height: 1.6;
-    max-width: 36rem;
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 3rem;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .stat-number {
-    font-family: Georgia, serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--foreground);
-  }
-
-  .stat-label {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  @media (min-width: 768px) {
-    .hero {
-      padding: 8rem 0;
-    }
-
-    .hero-title {
-      font-size: 4rem;
-    }
-  }
-</style>

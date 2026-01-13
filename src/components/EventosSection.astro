@@ -1,0 +1,92 @@
+---
+const eventos = [
+    {
+        id: 1,
+        imagen: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+        titulo: "Hablemos de IA en Latinoamérica",
+        descripcion: "Conferencia sobre el estado actual y futuro de la inteligencia artificial en la región.",
+    },
+    {
+        id: 2,
+        imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+        titulo: "DevFest Lima 2025",
+        descripcion: "El evento más grande de desarrolladores en Perú.",
+    },
+    {
+        id: 3,
+        imagen: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
+        titulo: "AI Builders CDMX",
+        descripcion: "Hackathon de 48 horas para construir soluciones con IA.",
+    },
+];
+---
+
+<section class="py-16 border-t border-border">
+    <div class="container">
+        <!-- Section header -->
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">
+                    EVENTOS
+                </p>
+                <h2 class="font-serif text-2xl md:text-3xl font-normal">
+                    Eventos destacados en LATAM
+                </h2>
+            </div>
+            <a
+                href="/eventos"
+                class="hidden md:inline-flex text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+                Ver todos →
+            </a>
+        </div>
+
+        <!-- Events grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {
+                eventos.map((evento) => (
+                    <a href={`/eventos/${evento.id}`} class="group block">
+                        <div class="aspect-[4/3] overflow-hidden rounded-sm mb-4">
+                            <img
+                                src={evento.imagen}
+                                alt={evento.titulo}
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                        </div>
+                        <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">
+                            CONFERENCIA
+                        </p>
+                        <h3 class="font-serif text-lg font-normal mb-2 group-hover:underline">
+                            {evento.titulo}
+                        </h3>
+                        <p class="text-sm text-muted-foreground">
+                            {evento.descripcion}
+                        </p>
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- Mobile link -->
+        <a
+            href="/eventos"
+            class="md:hidden inline-flex text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+        >
+            Ver todos →
+        </a>
+    </div>
+</section>
+
+<!-- Yellow banner: Hablemos de Startups -->
+<section class="bg-accent py-12">
+    <div class="container">
+        <div class="max-w-2xl">
+            <p class="text-xs font-medium uppercase tracking-widest text-accent-foreground/70 mb-2">
+                El ecosistema startup latinoamericano está madurando. Conecta con fundadores y VCs.
+            </p>
+            <h2 class="font-serif text-2xl md:text-3xl font-normal text-accent-foreground">
+                Hablemos de Startups
+            </h2>
+        </div>
+    </div>
+</section>
