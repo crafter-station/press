@@ -5,14 +5,16 @@ const articulos = [
         imagen: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
         categoria: "ENTREVISTA",
         titulo: "El futuro del trabajo remoto en LATAM",
-        descripcion: "Conversamos con líderes de la industria sobre cómo está evolucionando el trabajo remoto en la región.",
+        descripcion:
+            "Conversamos con líderes de la industria sobre cómo está evolucionando el trabajo remoto en la región.",
     },
     {
         id: 2,
         imagen: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=800&fit=crop",
         categoria: "PRODUCTO",
         titulo: "Diseño de productos sostenibles",
-        descripcion: "Cómo las startups están redefiniendo el diseño de productos con un enfoque en sostenibilidad.",
+        descripcion:
+            "Cómo las startups están redefiniendo el diseño de productos con un enfoque en sostenibilidad.",
     },
 ];
 ---
@@ -21,7 +23,9 @@ const articulos = [
     <div class="container">
         <!-- Section header -->
         <div class="mb-8">
-            <p class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2">
+            <p
+                class="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-2"
+            >
                 ARTÍCULOS DESTACADOS
             </p>
         </div>
@@ -31,7 +35,7 @@ const articulos = [
             {
                 articulos.map((articulo) => (
                     <a href={`/articulos/${articulo.id}`} class="group block">
-                        <div class="aspect-[3/4] overflow-hidden rounded-sm mb-4">
+                        <div class="aspect-[4/3] overflow-hidden rounded-sm mb-4">
                             <img
                                 src={articulo.imagen}
                                 alt={articulo.titulo}
